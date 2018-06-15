@@ -1,0 +1,130 @@
+// styling so that the grid-container fit the window screen
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-container{
+  display: grid;
+   // grid-gap: 20px;
+  padding: 10px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 100px;
+  background-color: white;
+}
+
+.first-paragraph{
+  grid-column-start: 1;
+  grid-column-end:8;
+  grid-row-start: 1;
+  grid-row-end:3;
+  text-align: center;
+  padding:20px 100px 0;
+  background-image: url(../images/gallery-header.jpeg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  font-size: 20px;
+  // border: 1px solid black;
+  // border-radius: 50px;
+  color: black;
+
+// heading is the colour black
+h1{
+    color: #6d8496;
+    font-size:75px;
+}
+}
+
+// -------------------------------------------------------------------------------
+// styling for all the gallery catergories
+.gallery1{
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 3;
+  grid-row-end: 6;
+  background-color: green;
+  display: inline-block;
+}
+
+.gallery2{
+  grid-column-start: 1;
+  grid-column-end:8;
+  grid-row-start: 6;
+  grid-row-end:9;
+  background-color: red;
+}
+
+.gallery3{
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 9;
+  grid-row-end:12;
+  background-color: blue;
+}
+
+.gallery4{
+  grid-column-start: 1;
+  grid-column-end: 8;
+  grid-row-start: 12;
+  grid-row-end:15;
+  background-color: violet;
+}
+
+// styling all of the gallery background and color
+.item{
+  text-align: center;
+  background-color: white;
+  color:#6d8496;
+  font-size: 25px;
+}
+
+.homepage{
+  grid-column-start:1;
+  grid-column-end:8;
+  text-decoration: none;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-auto-rows: 10px;
+  background-color: black;
+
+// styling the Homepage link
+a{
+  text-decoration: none;
+  color: #a47a07;
+  grid-column-start: 2;
+  grid-column-end:4;
+}
+
+// styling to place the icons along the same line as the homepage link
+.facebook-icon, .twitter-icon, a{
+  grid-row-start:5;
+  grid-row-end:6;
+}
+
+.facebook-icon{
+  grid-column-start:2;
+}
+
+.twitter-icon{
+  grid-column-start: 4;
+}
+}
+
+// ------------------------------------------------------------------------------
+
+  // RESPONISVE CODE
+
+  /* mobile */
+  @media only screen
+    and (min-width: 1px){
+      .grid-container, section, h1{
+        width: 100%;
+        display: block;
+      }
+
+     h1, .first-paragraph,{
+       font-size: 10px;
+     }
+}
